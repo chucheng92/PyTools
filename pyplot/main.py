@@ -14,9 +14,11 @@ def plotLineChart1():
     plt.xlabel("参数量")
     plt.ylabel("耗时(us)")
     # color, linestyle, linewidth, marker, markersize, label
-    plt.plot(x, y1, color='#0065AC', ls='-', lw=1.6, marker='*', ms=8, label="优化前")
-    plt.plot(x, y2, color='#FF7F0E', ls='-', lw=1.6, marker='*', ms=8, label="优化后")
+    # ls='-' 实线 ls='--' 虚线 ls='-.' 点划线 ls=':' 点虚线
+    plt.plot(x, y1, color='#0065AC', ls='-.', lw=1.6, marker='*', ms=8, label="优化前")
+    plt.plot(x, y2, color='#FF7F0E', ls='-.', lw=1.6, marker='*', ms=8, label="优化后")
     plt.grid()
+    # 线的标签
     plt.legend(loc='upper left')
     # 默认的像素：[6.0,4.0]，分辨率为100，图片尺寸为 600*400
     # 指定dpi=200，图片尺寸为 1200*800
